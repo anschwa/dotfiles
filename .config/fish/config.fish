@@ -1,26 +1,42 @@
-# fish is the friendly interactive shell
+################################################################################
+#                     Fish is the Friendly Interactive Shell                   #
+################################################################################
 
 # No Greeting
 set fish_greeting ""
 
-# Two-Line Prompt
-function fish_prompt -d "overwrite prompt"
-	set pwd_len 14
-    
-    set new_pwd (pwd)
-    if [ new_pwd = $HOME ]
-        set new_pwd "~/"
-    end
+# Homebrew
+addpath "/usr/local/bin"
 
-    set check_len (echo -n $new_pwd | wc -c)
-    if [ $check_len -gt $pwd_len ]
-        set new_pwd (echo -n $new_pwd | awk -F '/' '{print $1 "/" $2 "/.../" $(NF-1) "/" $(NF)}')
-    end
+# Tex Path
+addpath "/Library/Tex/texbin"
 
-	set prompt "~> "
-    echo "$USER@"(hostname -s)": "(set_color cyan)"$new_pwd"
-    echo -n $prompt
-end
+# for Go(lang)
+set GOPATH "$HOME/gowork"
+addpath "$GOPATH/bin"
+
+# Nginx Path
+addpath "/usr/local/nginx/sbin"
 
 # autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+
+# dotfiles
+if command -sq git
+    alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+end
+
+# Misc
+alias celar="clear"
+alias ll="ls -lh"
+
+# Python
+alias python="python3"
+alias pip="pip3"
+# virtualfish provides a nice wrapper for virtualenv in fish
+
+# Emacs
+alias emacs-debug="/Applications/Emacs.app/Contents/MacOS/Emacs --debug-init"
+alias emacs-gui="emacsclient -n -c -a ''"
+alias emacs-exit="emacsclient -e '(kill-emacs)'"
+alias emacs=emacs-gui
