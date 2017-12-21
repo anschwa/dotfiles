@@ -1,0 +1,36 @@
+#+TITLE: Dotfiles
+#+AUTHOR: Adam Schwartz
+#+DATE: December 21, 2017
+#+OPTIONS: ':true *:true toc:nil num:nil
+
+* Emacs
+#+BEGIN_SRC text
+git clone git@github.com:anschwa/emacs.d.git .emacs.d
+#+END_SRC
+
+* Install
+#+BEGIN_SRC text
+echo .dotfiles >> $HOME/.gitignore
+git clone --bare  git@github.com:anschwa/dotfiles.git $HOME/.dotfiles
+
+alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+dot checkout
+#+END_SRC
+
+* Use
+#+BEGIN_SRC text
+dot status
+dot add .emacs.d
+#+END_SRC
+
+* First Time Setup
+#+BEGIN_SRC text
+git init --bare $HOME/.dotfiles
+alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+dot config --local status.showUntrackedFiles no
+echo .dotfiles >> $HOME/.gitignore
+#+END_SRC
+
+** References
+- [[https://news.ycombinator.com/item?id%3D11071754][https://news.ycombinator.com/item?id=11071754]]
+- [[https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/][the best way to store your dotfiles]]
