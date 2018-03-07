@@ -11,12 +11,18 @@ addpath "/usr/local/bin"
 # Tex Path
 addpath "/Library/Tex/texbin"
 
-# for Go(lang)
+# Roswell (common lisp)
+addpath "$HOME/.roswell/bin"
+
+# Go(lang)
 set GOPATH "$HOME/gowork"
 addpath "$GOPATH/bin"
 
 # Nginx Path
 addpath "/usr/local/nginx/sbin"
+
+# Postgres Path
+addpath "/Library/PostgreSQL/10/bin"
 
 # autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish

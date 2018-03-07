@@ -6,5 +6,5 @@ function mp3
                --format=bestaudio \
                --extract-audio \
                --audio-format=mp3 \
-               --audio-quality=1 "$*"
+               --audio-quality=1 "$argv"
 end
