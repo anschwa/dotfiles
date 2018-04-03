@@ -178,3 +178,5 @@ function mp3 {
                --audio-quality=1 "$*"
 }
 
+
+export PATH="$HOME/.cargo/bin:$PATH"

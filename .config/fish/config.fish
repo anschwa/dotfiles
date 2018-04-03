@@ -18,6 +18,13 @@ addpath "$HOME/.roswell/bin"
 set GOPATH "$HOME/gowork"
 addpath "$GOPATH/bin"
 
+# Rust
+addpath "$HOME/.cargo/bin"
+
+# Plan9 (./plan9/bin/acme)
+set PLAN9 "$HOME/plan9"
+addpath "$PLAN9"
+
 # Nginx Path
 addpath "/usr/local/nginx/sbin"
 
