@@ -27,9 +27,9 @@ function editcmd --description "edit file or list directory"
         end
     else if test $mode = "cli"
         if test $path = ""
-            eval ls -lah
+            eval ls -lh
         else if test -d $path
-            eval cd $path; ls -lah
+            eval cd $path; ls -lh
         else
             eval $EDITOR $path
         end
