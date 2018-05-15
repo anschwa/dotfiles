@@ -2,6 +2,8 @@
 #                     Fish is the Friendly Interactive Shell                   #
 ################################################################################
 
+set EDITOR vim
+
 # No Greeting
 set fish_greeting ""
 
@@ -15,8 +17,9 @@ addpath "/Library/Tex/texbin"
 addpath "$HOME/.roswell/bin"
 
 # Go(lang)
-set GOPATH "$HOME/gowork"
-addpath "$GOPATH/bin"
+set GOPATH "$HOME/go"
+set GOBIN "$GOPATH/bin"
+addpath $GOBIN
 
 # Rust
 addpath "$HOME/.cargo/bin"
@@ -53,3 +56,8 @@ alias emacs-debug="/Applications/Emacs.app/Contents/MacOS/Emacs --debug-init"
 alias emacs-gui="emacsclient -n -c -a ''"
 alias emacs-exit="emacsclient -e '(kill-emacs)'"
 alias emacs=emacs-gui
+
+# Other Aliases
+alias ll="ls -lah"
+alias e="editcmd cli"
+alias ee="editcmd gui"
