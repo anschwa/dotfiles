@@ -44,7 +44,7 @@ end
 
 # Misc
 alias celar="clear"
-alias ll="ls -lh"
+alias ll="ls -lah"
 
 # Python
 alias python="python3"
@@ -58,6 +58,5 @@ alias emacs-exit="emacsclient -e '(kill-emacs)'"
 alias emacs=emacs-gui
 
 # Other Aliases
-alias ll="ls -lah"
 alias e="editcmd cli"
 alias ee="editcmd gui"

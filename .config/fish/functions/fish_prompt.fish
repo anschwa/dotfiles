@@ -19,5 +19,6 @@ function fish_prompt -d "overwrite prompt"
     echo $new_pwd               # adds newline
     set_color normal
 
+    #echo -n () "~> "
     echo -n (__terlar_git_prompt) "~> "
 end
