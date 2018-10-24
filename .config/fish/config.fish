@@ -24,15 +24,15 @@ addpath $GOBIN
 # Rust
 addpath "$HOME/.cargo/bin"
 
-# Plan9 (./plan9/bin/acme)
-set PLAN9 "$HOME/plan9"
-addpath "$PLAN9"
-
 # Nginx Path
 addpath "/usr/local/nginx/sbin"
 
 # Postgres Path
 addpath "/Library/PostgreSQL/10/bin"
+
+# Plan9 (./plan9/bin/acme)
+set PLAN9 "$HOME/plan9"
+addpath "$PLAN9"
 
 # autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
