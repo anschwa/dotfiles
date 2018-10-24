@@ -2,7 +2,7 @@
     ui = true
 [user]
     name = Adam Schwartz
-    email = aschwartz@diagnotes.com
+    email = adam@anschwa.com
 [alias]
     lol = log --graph --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
     amend = commit --amend -C HEAD
