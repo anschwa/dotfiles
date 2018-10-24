@@ -18,7 +18,6 @@
     ignorechanges = update-index --assume-unchanged
 [core]
     excludesfile = ~/.gitignore_global
-    excludefile = ~/.gitignore_global
 [push]
     default = current
     followTags = true
