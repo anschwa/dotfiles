@@ -1,12 +1,12 @@
 [color]
-	ui = true
+    ui = true
 [user]
-	name = Adam Schwartz
-    email = adam@anschwa.com
+    name = Adam Schwartz
+    email = aschwartz@diagnotes.com
 [alias]
-    lol = log --graph --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short 
+    lol = log --graph --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
     amend = commit --amend -C HEAD
-	prune = fetch --prune
+    prune = fetch --prune
     stash-all = stash save --include-untracked
     undo = reset --soft HEAD^
     st = status -sb --ignore-submodules
@@ -14,16 +14,17 @@
     br = branch
     co = checkout
     df = diff
-	review = diff --cached
+    review = diff --cached
     ignorechanges = update-index --assume-unchanged
 [core]
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global
+    excludefile = ~/.gitignore_global
 [push]
-	default = current
-	followTags = true
+    default = current
+    followTags = true
 [pull]
-	default = current
+    default = current
 [fetch]
-	default = matching
+    default = matching
 [status]
-	showUntrackedFiles = all
+    showUntrackedFiles = all
