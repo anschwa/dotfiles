@@ -7,6 +7,9 @@ set EDITOR vim
 # No Greeting
 set fish_greeting ""
 
+# Home/bin
+addpath "$HOME/bin"
+
 # Homebrew
 addpath "/usr/local/bin"
 

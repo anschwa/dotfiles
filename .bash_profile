@@ -1,5 +1,12 @@
 # .bash_profile
 
+# Customize Path
+export PATH="$PATH:$HOME/bin:/usr/local/go/bin"
+
+# Alias
+alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+
 ############################## Define Colors ###################################
 # Reset
 Color_Off='\e[0m'       # Text Reset

@@ -12,9 +12,6 @@ autocmd FileType make setlocal noexpandtab
 autocmd FileType ruby setlocal sw=2 ts=2 sts=2
 
 " My Variables
-
-set background=dark
-
 set ruler
 " set hlsearch
 set showmatch
@@ -22,6 +19,7 @@ set showmode
 syntax on
 
 " set virtualedit=all
+set number
 set expandtab
 set smarttab
 set shiftwidth=4
