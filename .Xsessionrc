@@ -3,4 +3,4 @@
 # Thinkpad T480
 # Turn on reverse scrolling (Natural Scrolling)
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
-xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Natural Scrolling Enabled" 1
+#xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Natural Scrolling Enabled" 1

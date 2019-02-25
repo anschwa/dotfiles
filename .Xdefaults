@@ -1,0 +1,75 @@
+ URxvt.termName: rxvt-256color
+URxvt.geometry: 80x24
+Urxvt.visualBell: true
+
+! URxvt.font: xft:consolata:pixelsize=12
+URxvt.font: xft:DejaVu sans mono:pixelsize=14
+URxvt.letterSpace: -1
+Xft*dpi: 96
+Xft*antialias: true
+Xft*hinting: full
+
+! do not scroll output
+URxvt*scrollTtyOutput: false
+URxvt.scrollTtyKeypress: true
+URxvt*scrollWithBuffer: true
+
+! scroll inside pagers
+URxvt.secondaryScroll: false
+
+! set history size
+URxvt.saveLines: 8192
+
+! disable ctrl+shift shortcut
+URxvt.iso14755: false
+
+! enable perl extensions
+URxvt.perl-lib: /usr/lib/urxvt/perl/
+URxvt.perl-ext: default,matcher,selection-to-clipboard
+! (tabbed) will enable terminal tabs, use shift+<arrow> to navigate
+
+! clickable URLs
+URxvt.urlLauncher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! Styles
+URxvt.scrollstyle: plain
+URxvt.scrollBar_right: true
+
+URxvt.internalBorder: 0
+
+! url colorn
+!URxvt.colorUL: #b6defb
+
+URxvt.colorUL: 12
+
+! Quick thmemes
+URxvt.keysym.C-1: command:\033]11;#10101c\007\033]10;#f2f2f2\007
+URxvt.keysym.C-2: command:\033]11;#073642\007\033]10;#f2f2f2\007
+URxvt.keysym.C-3: command:\033]11;#ffd\007\033]10;#000\007
+
+! transparent background
+URxvt.depth: 32
+urxvt*background: rgba:1111/1111/1111/dddd
+urxvt*foreground: #f2f2f2
+
+! set low intensity colors
+URxvt.color0:     #6c6c6c
+URxvt.color1:     #e9897c
+URxvt.color2:     #b6e77d
+URxvt.color3:     #ecebbe
+URxvt.color4:     #a9cdeb
+URxvt.color5:     #ea96eb
+URxvt.color6:     #c9caec
+URxvt.color7:     #f2f2f2
+
+! set high intensity colors
+URxvt.color8:     #747474
+URxvt.color9:     #f99286
+URxvt.color10:    #c3f786
+URxvt.color11:    #fcfbcc
+URxvt.color12:    #b6defb
+URxvt.color13:    #fba1fb
+URxvt.color14:    #d7d9fc
+URxvt.color15:    #e2e2e2
+                  

@@ -6,25 +6,6 @@ export PATH="$PATH:$HOME/bin:/usr/local/go/bin"
 # Alias
 alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
-
-############################## Define Colors ###################################
-# Reset
-Color_Off='\e[0m'       # Text Reset
-
-# Regular Colors
-Black='\e[0;30m'        # Black
-Red='\e[0;31m'          # Red
-Green='\e[0;32m'        # Green
-Yellow='\e[0;33m'       # Yellow
-Blue='\e[0;34m'         # Blue
-Purple='\e[0;35m'       # Purple
-Cyan='\e[0;36m'         # Cyan
-White='\e[0;37m'        # White
-
-# Example:
-#  echo -e "${blue}test"
-################################################################################
-
 # A nice one-line prompt
 # export PS1="\u@\h[${Cyan}\W${Color_Off}]\\$ "
 
@@ -42,7 +23,7 @@ PROMPT() {
     fi
 
     # generate the prompt
-    PS1_PATH=$(printf "%s" ${Cyan}$newPWD)    # needed to escape spaces in directories
+    PS1_PATH=$(printf "%s" $newPWD)    # needed to escape spaces in directories
     PS1_NAME="\[$Color_Off\]\u@\h:"
     PS1_CMD="\[$Color_Off\]\!-$"    # command history number
 
