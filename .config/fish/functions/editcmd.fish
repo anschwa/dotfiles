@@ -15,7 +15,7 @@ function editcmd --description "edit file or list directory"
 
     if test $mode = "gui"
         switch (uname)
-            case Darwin
+            case Darwin or Linux
                 if test $path = ""
                     set pwd (pwd)
                     eval emacsclient -n -c $pwd

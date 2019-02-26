@@ -33,6 +33,7 @@ addpath "$HOME/.cargo/bin"
 
 # Nginx Path
 addpath "/usr/local/nginx/sbin"
+addpath "/usr/sbin"
 
 # Postgres Path
 addpath "/Library/PostgreSQL/10/bin"
