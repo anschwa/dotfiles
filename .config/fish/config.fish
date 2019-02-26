@@ -20,6 +20,10 @@ addpath "/Library/Tex/texbin"
 addpath "$HOME/.roswell/bin"
 
 # Go(lang)
+if test -x /usr/local/go/bin/go
+  addpath /usr/local/go/bin
+end
+
 set GOPATH "$HOME/go"
 set GOBIN "$GOPATH/bin"
 addpath $GOBIN
