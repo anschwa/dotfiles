@@ -13,9 +13,12 @@ Xft*hinting: full
 URxvt*scrollTtyOutput: false
 URxvt.scrollTtyKeypress: true
 URxvt*scrollWithBuffer: true
+                        
+! enable scrollback inside pagers or tmux
+URxvt.secondaryScroll: true
 
-! scroll inside pagers
-URxvt.secondaryScroll: false
+! clear scrollback (reset command)
+URxvt.keysym.Meta-k: command:\033c
 
 ! set history size
 URxvt.saveLines: 8192
