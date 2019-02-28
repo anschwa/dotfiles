@@ -13,7 +13,7 @@ Xft*hinting: full
 URxvt*scrollTtyOutput: false
 URxvt.scrollTtyKeypress: true
 URxvt*scrollWithBuffer: true
-                        
+
 ! enable scrollback inside pagers or tmux
 URxvt.secondaryScroll: true
 
