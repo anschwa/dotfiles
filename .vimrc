@@ -3,7 +3,7 @@ set backspace=2
 
 syntax on
 
-" filetypes
+" Filetypes
 filetype on
 filetype plugin on
 filetype indent on
@@ -11,18 +11,24 @@ filetype indent on
 " In Makefiles DO NOT use spaces instead of tabs
 autocmd FileType make setlocal noexpandtab
 
-set ruler
-set laststatus=2
-set statusline=%F%m%r%h%y[%p%%](%l,%v)
-
-set incsearch
-set hlsearch
-set showmatch
-set showmode
-
-set number
+" Use spaces everywhere else
 set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
-set paste
+
+" Other Customizations
+set ruler
+set number
+set laststatus=2
+set statusline=%f%m%r%h\ %y\ %p%%\ (%l\,%v)
+
+set incsearch
+set smartcase
+set showmatch
+set showmode
+set hlsearch
+
+" Usefull for hlsearch
+set background=dark
+hi Search cterm=NONE ctermfg=black ctermbg=magenta
