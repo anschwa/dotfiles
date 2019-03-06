@@ -19,6 +19,7 @@
     review = diff --cached
     ignorechanges = update-index --assume-unchanged
 [core]
+	editor = "vi"
     excludesfile = ~/.gitignore_global
 [push]
     default = current

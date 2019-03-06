@@ -5,6 +5,7 @@ Urxvt.visualBell: true
 ! URxvt.font: xft:consolata:pixelsize=12
 URxvt.font: xft:DejaVu sans mono:pixelsize=14
 URxvt.letterSpace: -1
+URxvt.lineSpace: 1
 Xft*dpi: 96
 Xft*antialias: true
 Xft*hinting: full
