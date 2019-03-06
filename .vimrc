@@ -24,6 +24,7 @@ set laststatus=2
 set statusline=%f%m%r%h\ %y\ %p%%\ (%l\,%v)
 
 set incsearch
+set ignorecase
 set smartcase
 set showmatch
 set showmode
