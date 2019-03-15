@@ -30,3 +30,5 @@
     default = matching
 [status]
     showUntrackedFiles = all
+[diff]
+    wsErrorHighlight = all
