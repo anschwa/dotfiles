@@ -1,6 +1,6 @@
-################################################################################
-#                     Fish is the Friendly Interactive Shell                   #
-################################################################################
+########################################################################
+#                     Fish is the Friendly Interactive Shell           #
+########################################################################
 
 set EDITOR vim
 
@@ -38,7 +38,7 @@ addpath "/usr/sbin"
 # Postgres Path
 addpath "/Library/PostgreSQL/10/bin"
 
-# Plan9 (./plan9/bin/acme)
+# Plan9 (./plan9/bin/9 acme)
 set PLAN9 "$HOME/plan9"
 addpath "$PLAN9"
 
