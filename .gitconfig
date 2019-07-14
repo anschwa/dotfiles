@@ -1,10 +1,5 @@
 [color]
     ui = true
-[user]
-    name = Adam Schwartz
-    email = aschwartz@diagnotes.com
-[url "git@github.com:diagnotes"]
-	insteadOf = https://github.com/diagnotes
 [alias]
     lol = log --graph --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
     amend = commit --amend -C HEAD
@@ -19,7 +14,7 @@
     review = diff --cached
     ignorechanges = update-index --assume-unchanged
 [core]
-	editor = "vi"
+        editor = "vi"
     excludesfile = ~/.gitignore_global
 [push]
     default = current
