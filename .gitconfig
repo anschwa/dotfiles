@@ -1,7 +1,7 @@
 [color]
     ui = true
 [alias]
-    lol = log --graph --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
+    ll = log --graph --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
     amend = commit --amend -C HEAD
     prune = fetch --prune
     stash-all = stash save --include-untracked
@@ -14,7 +14,7 @@
     review = diff --cached
     ignorechanges = update-index --assume-unchanged
 [core]
-        editor = "vi"
+    editor = "vi"
     excludesfile = ~/.gitignore_global
 [push]
     default = current
