@@ -1,18 +1,18 @@
 style "xfdesktop-icon-view" {
-# Remove background color on desktop icon filename.
+      # Remove background color on desktop icon filename.
 
-XfdesktopIconView::label-alpha = 0
-XfdesktopIconView::selected-label-alpha = 170
-XfdesktopIconView::cell-spacing = 6
-XfdesktopIconView::cell-padding = 6
-XfdesktopIconView::cell-text-width-proportion = 2.5
+      XfdesktopIconView::label-alpha = 0
+      XfdesktopIconView::selected-label-alpha = 170
+      XfdesktopIconView::cell-spacing = 6
+      XfdesktopIconView::cell-padding = 6
+      XfdesktopIconView::cell-text-width-proportion = 2.5
 
-base[NORMAL] = "#cccccc"
-base[SELECTED] = "#cccccc"
-base[ACTIVE] = "#cccccc"
+      base[NORMAL] = "#cccccc"
+      base[SELECTED] = "#cccccc"
+      base[ACTIVE] = "#cccccc"
 
-fg[NORMAL] = "#ffffff"
-fg[SELECTED] = "#000000"
-fg[ACTIVE] = "#000000"
+      fg[NORMAL] = "#ffffff"
+      fg[SELECTED] = "#000000"
+      fg[ACTIVE] = "#000000"
 }
 widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
