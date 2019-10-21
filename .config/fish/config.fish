@@ -9,6 +9,7 @@ set fish_greeting ""
 
 # Home/bin
 addpath "$HOME/bin"
+addpath "$HOME/.local/bin"
 
 # Homebrew
 addpath "/usr/local/bin"

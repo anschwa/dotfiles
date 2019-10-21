@@ -2,7 +2,6 @@ URxvt.termName: rxvt-256color
 URxvt.geometry: 80x24
 Urxvt.visualBell: true
 
-! URxvt.font: xft:consolata:pixelsize=12
 URxvt.font: xft:DejaVu sans mono:pixelsize=14
 URxvt.letterSpace: -1
 URxvt.lineSpace: 1
@@ -19,7 +18,7 @@ URxvt*scrollWithBuffer: true
 URxvt.secondaryScroll: true
 
 ! clear scrollback (reset command)
-URxvt.keysym.Meta-k: command:\033c
+URxvt.keysym.Meta-k: command: \033c
 
 ! set history size
 URxvt.saveLines: 8192
@@ -29,8 +28,14 @@ URxvt.iso14755: false
 
 ! enable perl extensions
 URxvt.perl-lib: /usr/lib/urxvt/perl/
-URxvt.perl-ext: default,matcher,selection-to-clipboard
+URxvt.perl-ext: default,matcher,selection-to-clipboard,resize-font
 ! (tabbed) will enable terminal tabs, use shift+<arrow> to navigate
+
+! change font size
+! https://github.com/simmel/urxvt-resize-font
+URxvt.perl-ext-common: resize-font
+URxvt.keysym.Meta-plus: resize-font:bigger
+URxvt.keysym.Meta-minus: resize-font:smaller
 
 ! clickable URLs
 URxvt.urlLauncher: /usr/bin/xdg-open
