@@ -3,6 +3,7 @@
 ########################################################################
 
 set EDITOR vim
+set VISUAL vim
 
 # No Greeting
 set fish_greeting ""
@@ -35,6 +36,9 @@ addpath "$HOME/.cargo/bin"
 # Nginx Path
 addpath "/usr/local/nginx/sbin"
 addpath "/usr/sbin"
+
+# AWS
+addpath "$HOME/.local/bin"
 
 # Postgres Path
 addpath "/Library/PostgreSQL/10/bin"
