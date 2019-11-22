@@ -58,8 +58,11 @@ end
 # Misc
 alias celar="clear"
 alias ll="ls -lah"
+alias l="ls -lh"
 alias e="editcmd cli"
 alias ee="editcmd gui"
+alias s="git status -sb --ignore-submodules"
+alias d="git diff"
 
 # Python
 alias python="python3"
