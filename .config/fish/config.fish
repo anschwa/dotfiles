@@ -58,11 +58,11 @@ end
 # Misc
 alias celar="clear"
 alias ll="ls -lah"
-alias l="ls -lh"
 alias e="editcmd cli"
 alias ee="editcmd gui"
-alias s="git status -sb --ignore-submodules"
 alias d="git diff"
+alias s="git status -sb --ignore-submodules"
+alias l="git log --graph --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short"
 
 # Python
 alias python="python3"
