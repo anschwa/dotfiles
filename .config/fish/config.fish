@@ -40,15 +40,9 @@ addpath "/usr/sbin"
 # AWS
 addpath "$HOME/.local/bin"
 
-# Postgres Path
-addpath "/Library/PostgreSQL/10/bin"
-
 # Plan9 (./plan9/bin/9 acme)
 set PLAN9 "$HOME/plan9"
 addpath "$PLAN9"
-
-# autojump
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 # dotfiles
 if command -sq git
@@ -63,17 +57,6 @@ alias ee="editcmd gui"
 alias d="git diff"
 alias s="git status -sb --ignore-submodules"
 alias l="git log --graph --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short"
-
-# Python
-alias python="python3"
-alias pip="pip3"
-# virtualfish provides a nice wrapper for virtualenv in fish
-
-# Emacs
-alias emacs-debug="/Applications/Emacs.app/Contents/MacOS/Emacs --debug-init"
-alias emacs-gui="emacsclient -n -c -a ''"
-alias emacs-exit="emacsclient -e '(kill-emacs)'"
-alias emacs=emacs-gui
 
 # Kubernetes
 alias k="kubectl"

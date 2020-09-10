@@ -14,9 +14,9 @@ function fish_prompt -d "overwrite prompt"
 
     # write prompt to screen
     echo -n "$USER@"(hostname -s)": "
-    
-    set_color cyan
-    echo $new_pwd               # adds newline
+
+    set_color -o        # set bold
+    echo $new_pwd       # adds newline
     set_color normal
 
     #echo -n () "~> "
