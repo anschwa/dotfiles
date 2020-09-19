@@ -2,6 +2,7 @@ set nocompatible
 set backspace=2
 
 syntax on
+set background=light
 
 " Filetypes
 filetype on
@@ -31,5 +32,4 @@ set showmode
 set hlsearch
 
 " Usefull for hlsearch
-set background=dark
 hi Search cterm=NONE ctermfg=black ctermbg=magenta
