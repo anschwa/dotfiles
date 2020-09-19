@@ -51,12 +51,8 @@ end
 
 # Misc
 alias celar="clear"
-alias ll="ls -lah"
+alias l="ls -lah"
+alias g="rg -S"
 alias e="editcmd cli"
 alias ee="editcmd gui"
-alias d="git diff"
-alias s="git status -sb --ignore-submodules"
-alias l="git log --graph --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short"
 
-# Kubernetes
-alias k="kubectl"
