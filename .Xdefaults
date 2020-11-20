@@ -28,8 +28,7 @@ URxvt.iso14755: false
 
 ! enable perl extensions
 URxvt.perl-lib: /usr/lib/urxvt/perl/
-URxvt.perl-ext: default,matcher,selection-to-clipboard,resize-font
-! (tabbed) will enable terminal tabs, use shift+<arrow> to navigate
+URxvt.perl-ext: default,selection-to-clipboard,resize-font
 
 ! change font size
 ! https://github.com/simmel/urxvt-resize-font
@@ -53,24 +52,24 @@ URxvt.colorUL: 12
 ! transparent background
 URxvt.depth: 32
 urxvt*background: rgba:1111/1111/1111/dddd
-urxvt*foreground: #f2f2f2
+urxvt*foreground: #f3f2f2
 
 ! set low intensity colors
-URxvt.color0:     #6c6c6c
-URxvt.color1:     #e9897c
-URxvt.color2:     #b6e77d
-URxvt.color3:     #ecebbe
-URxvt.color4:     #a9cdeb
-URxvt.color5:     #ea96eb
-URxvt.color6:     #c9caec
-URxvt.color7:     #f2f2f2
+URxvt.color0: #6c6c6c
+URxvt.color1: #e9897c
+URxvt.color2: #b6e77d
+URxvt.color3: #ecebbe
+URxvt.color4: #a9cdeb
+URxvt.color5: #ea96eb
+URxvt.color6: #c9caec
+URxvt.color7: #f2f2f2
 
 ! set high intensity colors
-URxvt.color8:     #747474
-URxvt.color9:     #f99286
-URxvt.color10:    #c3f786
-URxvt.color11:    #fcfbcc
-URxvt.color12:    #b6defb
-URxvt.color13:    #fba1fb
-URxvt.color14:    #d7d9fc
-URxvt.color15:    #e2e2e2
+URxvt.color8:  #747474
+URxvt.color9:  #f99286
+URxvt.color10: #c3f786
+URxvt.color11: #fcfbcc
+URxvt.color12: #b6defb
+URxvt.color13: #fba1fb
+URxvt.color14: #d7d9fc
+URxvt.color15: #e2e2e2
