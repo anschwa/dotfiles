@@ -1,11 +1,7 @@
 #!/bin/bash
 
-####################################################################
-# On fedora, the git-prompt.sh script can be found at:             #
-# /usr/share/doc/git/contrib/completion/git-prompt.sh              #
-#                                                                  #
-# IMPORTANT: Bash Prompt is configured at the bottom of this file! #
-####################################################################
+# On fedora, the git-prompt.sh script can be found at:
+# /usr/share/doc/git/contrib/completion/git-prompt.sh
 #
 # bash/zsh git prompt support
 #
@@ -593,11 +589,3 @@ __git_ps1 ()
 
         return $exit
 }
-
-####################################################################
-
-# ENABLE GIT PROMPT
-GIT_PS1_SHOWCOLORHINTS=true
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-PROMPT_COMMAND='__git_ps1 "\u@\h:\w" \\n"\\\$ "'
