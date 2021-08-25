@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # ALIASES
 alias ll="ls -lah"

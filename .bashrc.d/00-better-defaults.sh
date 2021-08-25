@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # Ignore duplicate history entries and allow for more entries
 HISTCONTROL=ignoredups:ignorespace
