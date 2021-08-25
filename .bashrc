@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# BETTER DEFAULTS
 # Ignore duplicate history entries and allow for more entries
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=-1
@@ -13,20 +14,26 @@ shopt -q -s cmdhist  # Make multi-line commandsline in history
 shopt -s checkwinsize  # Make sure display get updated when terminal window get resized
 shopt -s histappend histreedit histverify
 
+# EDITOR
+export VISUAL="vi"
+export EDITOR="vi"
+
 # PATH
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 [ -d "/usr/local/go/bin" ] && PATH="$PATH:/usr/local/go/bin"
-
 export PATH
 
 # ALIASES
-alias ll="ls -lah"
+alias ll="ls -lh --color"
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias emacs-start="emacs --daemon"
+alias emacs-exit="emacsclient -n -e '(kill-emacs)'"
+alias ee="emacsclient -nc"
 
 # PROMPT
 if [ -f "$HOME/.git-prompt.sh" ]
 then
-    . "$HOME/.git-prompt.sh"
+    source "$HOME/.git-prompt.sh"
 
     GIT_PS1_SHOWCOLORHINTS=true
     GIT_PS1_SHOWDIRTYSTATE=true
@@ -36,24 +43,25 @@ fi
 
 # MISC
 # Configuration for fzf (https://github.com/junegunn/fzf)
+#   C-r: search bash_history
+#   C-t: insert  from $PWD
+#   M-c: cd into selected directory
+[ -f /usr/share/fzf/shell/key-bindings.bash ] && source /usr/share/fzf/shell/key-bindings.bash
 
-# Add keybindings for navigating shell history
-# C-r: search bash_history
-# C-t: insert  from $PWD
-# M-c: cd into selected directory
-[ -f /usr/share/fzf/shell/key-bindings.bash ] && . /usr/share/fzf/shell/key-bindings.bash
+# FUNCTIONS
+# 3-in-1: ls, cd, and edit as one command!
+e() {
+    # No arguments is a regular 'ls'
+    [ "$#" -eq 0 ] && ls -lh --color && return
 
-# Emacs
-emacsStart() {
-    emacsclient --create-frame --alternate-editor=""
-}
+    # If $1 is a directory, cd then list all files
+    if [ "$#" -eq 1 ]
+    then
+        [ -d "$1" ] && cd "$1" && ls -lh --color && return
+    fi
 
-emacsExit() {
-    emacsclient -n -e '(kill-emacs)'
-}
-
-emacsFrame() {
-    emacsclient -nc
+    # Otherwise, open all files to edit
+    $EDITOR "$@"
 }
 
 # Password Generator
