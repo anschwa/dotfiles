@@ -14,6 +14,9 @@ shopt -q -s cmdhist  # Make multi-line commandsline in history
 shopt -s checkwinsize  # Make sure display get updated when terminal window get resized
 shopt -s histappend histreedit histverify
 
+# Enable all bash completions
+[ -f /etc/profile.d/bash_completion.sh ] && source /etc/profile.d/bash_completion.sh
+
 # EDITOR
 export VISUAL="vi"
 export EDITOR="vi"
@@ -29,6 +32,7 @@ alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias emacs-start="emacs --daemon"
 alias emacs-exit="emacsclient -n -e '(kill-emacs)'"
 alias ee="emacsclient -nc"
+alias open="xdg-open"
 
 # PROMPT
 if [ -f "$HOME/.git-prompt.sh" ]

@@ -24,3 +24,5 @@
     showUntrackedFiles = all
 [diff]
     wsErrorHighlight = all
+[init]
+	defaultBranch = main
