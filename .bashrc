@@ -22,8 +22,21 @@ export VISUAL="vi"
 export EDITOR="vi"
 
 # PATH
+# start fresh
+[ -d "/usr/sbin" ] && PATH="/usr/sbin"
+[ -d "/usr/bin" ] && PATH="/usr/bin:$PATH"
+[ -d "/usr/local/sbin" ] && PATH="/usr/local/sbin:$PATH"
+[ -d "/usr/local/bin" ] && PATH="/usr/local/bin:$PATH"
+
+# personal use
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
+
+# go(lang)
 [ -d "/usr/local/go/bin" ] && PATH="$PATH:/usr/local/go/bin"
+[ -d "$HOME/go" ] && export GOPATH="$HOME/go"
+[ -d "$HOME/go/bin" ] && export GOBIN="$HOME/go/bin"
+[ -n "$GOBIN" ] && PATH="$PATH:$GOBIN"
+
 export PATH
 
 # ALIASES
