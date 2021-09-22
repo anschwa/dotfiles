@@ -84,9 +84,6 @@ e() {
 # Password Generator
 randpw() {
     len=16
-    if [ -n "$1" ]; then
-        len="$1"
-    fi
-
-    env LC_CTYPE=C tr -dc "_a-zA-Z0-9-" < /dev/urandom | fold -w "$len" | head -n 1
+    [ -n "$1" ] && len="$1"
+    LC_CTYPE=C tr -dc "_a-zA-Z0-9-" < /dev/urandom | fold -w "$len" | head -n 1
 }
