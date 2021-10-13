@@ -42,10 +42,12 @@ export PATH
 # ALIASES
 alias ll="ls -lh --color"
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias open="xdg-open"
 alias emacs-start="emacs --daemon"
 alias emacs-exit="emacsclient -n -e '(kill-emacs)'"
 alias ee="emacsclient -nc"
-alias open="xdg-open"
+complete -o bashdefault -o default -F _fzf_path_completion ee
+
 
 # PROMPT
 if [ -f "$HOME/.git-prompt.sh" ]
