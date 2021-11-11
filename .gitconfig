@@ -26,3 +26,5 @@
     wsErrorHighlight = all
 [init]
 	defaultBranch = main
+[url "git@github.com:anschwa"]
+	insteadOf = https://github.com/anschwa
