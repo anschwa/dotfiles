@@ -40,7 +40,7 @@ export EDITOR="vi"
 export PATH
 
 # ALIASES
-alias ll="ls -lh --color"
+alias ll="ls -Alpvh --group-directories --color"
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias open="xdg-open"
 alias emacs-start="emacs --daemon"
