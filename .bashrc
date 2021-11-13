@@ -71,7 +71,7 @@ fi
 # 3-in-1: ls, cd, and edit as one command!
 e() {
     # No arguments is a regular 'ls'
-    [ "$#" -eq 0 ] && ls -lh --color && return
+    [ "$#" -eq 0 ] && ls -Alpvh --group-directories --color && return
 
     # If $1 is a directory, cd then list all files
     if [ "$#" -eq 1 ]
