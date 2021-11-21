@@ -1,5 +1,6 @@
 set nocompatible
 set backspace=2
+set textwidth=72
 
 syntax on
 set background=light
