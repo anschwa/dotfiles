@@ -22,21 +22,25 @@ export VISUAL="vi"
 export EDITOR="vi"
 
 # PATH
-# start fresh
+# Start fresh
 [ -d "/usr/sbin" ] && PATH="/usr/sbin"
 [ -d "/usr/bin" ] && PATH="/usr/bin:$PATH"
 [ -d "/usr/local/sbin" ] && PATH="/usr/local/sbin:$PATH"
 [ -d "/usr/local/bin" ] && PATH="/usr/local/bin:$PATH"
 
-# personal use
+# Personal use
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 
-# go(lang)
+# Go(lang)
 [ -d "/usr/local/go/bin" ] && PATH="$PATH:/usr/local/go/bin"
 [ -d "$HOME/go" ] && export GOPATH="$HOME/go"
 [ -d "$HOME/go/bin" ] && export GOBIN="$HOME/go/bin"
 [ -n "$GOBIN" ] && PATH="$PATH:$GOBIN"
 
+# Rust
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+
+# Done with $PATH
 export PATH
 
 # ALIASES
@@ -66,6 +70,11 @@ fi
 #   C-t: insert  from $PWD
 #   M-c: cd into selected directory
 [ -f /usr/share/fzf/shell/key-bindings.bash ] && source /usr/share/fzf/shell/key-bindings.bash
+
+# I only want history navigation, so this is how I'm restoring the
+# default keybindings to C-t and M-c
+bind -r "\C-t" && bind -m emacs-standard '"\C-t":transpose-chars'
+bind -r "\ec" && bind -m emacs-standard '"\ec":capitalize-word'
 
 # FUNCTIONS
 # 3-in-1: ls, cd, and edit as one command!
