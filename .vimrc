@@ -10,15 +10,6 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" In Makefiles DO NOT use spaces instead of tabs
-autocmd FileType make setlocal noexpandtab
-
-" Use spaces everywhere else
-set expandtab
-set smarttab
-set shiftwidth=4
-set tabstop=4
-
 " Other Customizations
 set ruler
 set number

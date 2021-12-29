@@ -23,7 +23,9 @@ export EDITOR="vi"
 
 # PATH
 # Start fresh
-[ -d "/usr/sbin" ] && PATH="/usr/sbin"
+[ -d "/sbin" ] && PATH="/sbin"
+[ -d "/bin" ] && PATH="/bin:$PATH"
+[ -d "/usr/sbin" ] && PATH="/usr/sbin:$PATH"
 [ -d "/usr/bin" ] && PATH="/usr/bin:$PATH"
 [ -d "/usr/local/sbin" ] && PATH="/usr/local/sbin:$PATH"
 [ -d "/usr/local/bin" ] && PATH="/usr/local/bin:$PATH"
@@ -44,7 +46,7 @@ export EDITOR="vi"
 export PATH
 
 # ALIASES
-alias ll="ls -Alpvh --group-directories --color"
+alias ls="ls -Alph --color"
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias open="xdg-open"
 alias emacs-start="emacs --daemon"
@@ -80,7 +82,7 @@ bind -r "\ec" && bind -m emacs-standard '"\ec":capitalize-word'
 # 3-in-1: ls, cd, and edit as one command!
 e() {
     # No arguments is a regular 'ls'
-    [ "$#" -eq 0 ] && ls -Alpvh --group-directories --color && return
+    [ "$#" -eq 0 ] && ls -Alph --color && return
 
     # If $1 is a directory, cd then list all files
     if [ "$#" -eq 1 ]
