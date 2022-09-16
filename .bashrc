@@ -42,6 +42,9 @@ export EDITOR="vi"
 # Rust
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
+# Fly.io (flyctl)
+[ -d "$HOME/.fly" ] && PATH="$PATH:$HOME/.fly/bin"
+
 # Done with $PATH
 export PATH
 
@@ -52,8 +55,6 @@ alias open="xdg-open"
 alias emacs-start="emacs --daemon"
 alias emacs-exit="emacsclient -n -e '(kill-emacs)'"
 alias ee="emacsclient -nc"
-complete -o bashdefault -o default -F _fzf_path_completion ee
-
 
 # PROMPT
 if [ -f "$HOME/.git-prompt.sh" ]
@@ -66,17 +67,25 @@ then
     PROMPT_COMMAND='__git_ps1 "\u@\h:\w" \\n"\\\$ "'
 fi
 
-# MISC
 # Configuration for fzf (https://github.com/junegunn/fzf)
-#   C-r: search bash_history
-#   C-t: insert  from $PWD
-#   M-c: cd into selected directory
-[ -f /usr/share/fzf/shell/key-bindings.bash ] && source /usr/share/fzf/shell/key-bindings.bash
+# First make sure fd (https://github.com/sharkdp/fd) is installed:
+if [ -x "$(command -v fd)" ] && [ -x "$(command -v fzf)" ]
+then
+    export FZF_DEFAULT_COMMAND="fd --color=never --exclude=node_modules --exclude=vendor"
 
-# I only want history navigation, so this is how I'm restoring the
-# default keybindings to C-t and M-c
-bind -r "\C-t" && bind -m emacs-standard '"\C-t":transpose-chars'
-bind -r "\ec" && bind -m emacs-standard '"\ec":capitalize-word'
+    # These are the default fzf keybindings:
+    #   C-r: search bash_history
+    #   C-t: insert  from $PWD
+    #   M-c: cd into selected directory
+    [ -f /usr/share/fzf/shell/key-bindings.bash ] && source /usr/share/fzf/shell/key-bindings.bash
+
+    # I only want history navigation, so this is how I'm restoring the
+    # default keybindings to C-t and M-c
+    bind -r "\C-t" && bind -m emacs-standard '"\C-t":transpose-chars'
+    bind -r "\ec" && bind -m emacs-standard '"\ec":capitalize-word'
+
+    complete -o bashdefault -o default -F _fzf_path_completion ee
+fi
 
 # FUNCTIONS
 # 3-in-1: ls, cd, and edit as one command!
