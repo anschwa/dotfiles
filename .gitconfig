@@ -29,3 +29,5 @@
 	defaultBranch = main
 [url "git@github.com:anschwa"]
 	insteadOf = https://github.com/anschwa
+[tag]
+	sort = -version:refname
