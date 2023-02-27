@@ -3,7 +3,7 @@
 # BETTER DEFAULTS
 # Ignore duplicate history entries and allow for more entries
 HISTCONTROL=ignoredups:ignorespace
-HISTSIZE=-1
+HISTSIZE=10000
 HISTFILESIZE=10000
 
 # Add ISO 8601 datestring to command
@@ -51,10 +51,10 @@ export PATH
 # ALIASES
 alias ls="ls -Alph --color"
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias open="xdg-open"
 alias emacs-start="emacs --daemon"
 alias emacs-exit="emacsclient -n -e '(kill-emacs)'"
 alias ee="emacsclient -nc"
+! [ -x "$(command -v open)" ] && alias open="xdg-open"
 
 # PROMPT
 if [ -f "$HOME/.git-prompt.sh" ]
@@ -107,5 +107,5 @@ e() {
 randpw() {
     len=16
     [ -n "$1" ] && len="$1"
-    LC_CTYPE=C tr -dc "_a-zA-Z0-9-" < /dev/urandom | fold -w "$len" | head -n 1
+    LC_CTYPE=en.US.UTF-8 tr -dc "_a-zA-Z0-9-" < /dev/urandom | fold -w "$len" | head -n 1
 }

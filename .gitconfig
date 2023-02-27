@@ -17,8 +17,10 @@
 [push]
     default = current
     followTags = true
+    autoSetupRemote = true
 [pull]
     default = current
+    ff = only
 [fetch]
     default = matching
 [status]
@@ -26,8 +28,8 @@
 [diff]
     wsErrorHighlight = all
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [url "git@github.com:anschwa"]
-	insteadOf = https://github.com/anschwa
+    insteadOf = https://github.com/anschwa
 [tag]
-	sort = -version:refname
+    sort = -version:refname
