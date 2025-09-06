@@ -2,12 +2,15 @@
     ui = true
 [alias]
     ll = log --graph --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
+    l = ll -12
     undo = reset --soft HEAD^
     st = status -sb --ignore-submodules
     ci = commit
     br = branch
     co = checkout
     df = diff
+    new = ll ...main
+    changed = diff --name-only main
     review = diff --cached
     ignorechanges = update-index --assume-unchanged
 [core]

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # BETTER DEFAULTS
 # Ignore duplicate history entries and allow for more entries
@@ -29,6 +29,9 @@ export EDITOR="vi"
 [ -d "/usr/bin" ] && PATH="/usr/bin:$PATH"
 [ -d "/usr/local/sbin" ] && PATH="/usr/local/sbin:$PATH"
 [ -d "/usr/local/bin" ] && PATH="/usr/local/bin:$PATH"
+
+# MacPorts
+[ -d "/opt/local/bin" ] && PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # Personal use
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
@@ -65,26 +68,6 @@ then
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWUNTRACKEDFILES=true
     PROMPT_COMMAND='__git_ps1 "\u@\h:\w" \\n"\\\$ "'
-fi
-
-# Configuration for fzf (https://github.com/junegunn/fzf)
-# First make sure fd (https://github.com/sharkdp/fd) is installed:
-if [ -x "$(command -v fd)" ] && [ -x "$(command -v fzf)" ]
-then
-    export FZF_DEFAULT_COMMAND="fd --color=never --exclude=node_modules --exclude=vendor"
-
-    # These are the default fzf keybindings:
-    #   C-r: search bash_history
-    #   C-t: insert  from $PWD
-    #   M-c: cd into selected directory
-    [ -f /usr/share/fzf/shell/key-bindings.bash ] && source /usr/share/fzf/shell/key-bindings.bash
-
-    # I only want history navigation, so this is how I'm restoring the
-    # default keybindings to C-t and M-c
-    bind -r "\C-t" && bind -m emacs-standard '"\C-t":transpose-chars'
-    bind -r "\ec" && bind -m emacs-standard '"\ec":capitalize-word'
-
-    complete -o bashdefault -o default -F _fzf_path_completion ee
 fi
 
 # FUNCTIONS
